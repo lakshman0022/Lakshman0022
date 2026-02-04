@@ -1,11 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#333;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:50px;
+    text-align:center;
+}
+
+#about, #skills, #projects, #contact{
+    background:white;
+    margin:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+    padding:10px 20px;
+    background:#333;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#333;
+    color:white;
+    margin-top:20px;
+}
+
+.project-box{
+    margin-top:20px;
+}
+
+input, textarea{
+    width:80%;
+    padding:10px;
+    margin:10px 0;
+}
+
+.hidden{
+    display:none;
+}
+</style>
+
 </head>
 <body>
-   <h1>hello world</h1> 
+
+<header>
+    <h1>Your Name</h1>
+    <p>Digital Marketer | Web Developer | Freelancer</p>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hi, I am a passionate professional who loves creating websites and digital experiences.
+        I specialize in digital marketing, web development and automation.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul style="list-style:none;">
+        <li>HTML, CSS, JavaScript</li>
+        <li>SEO & Digital Marketing</li>
+        <li>Social Media Marketing</li>
+        <li>Website Design</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-box">
+        <h3>Project 1</h3>
+        <p>Business Website Design</p>
+    </div>
+
+    <div class="project-box">
+        <h3>Project 2</h3>
+        <p>Marketing Landing Page</p>
+    </div>
+
+    <button onclick="showMore()">Show More Projects</button>
+
+    <div id="moreProjects" class="hidden">
+        <div class="project-box">
+            <h3>Project 3</h3>
+            <p>Invoice Management System</p>
+        </div>
+        <div class="project-box">
+            <h3>Project 4</h3>
+            <p>Portfolio Website</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <textarea id="message" placeholder="Your Message"></textarea>
+
+    <button onclick="sendMessage()">Send Message</button>
+
+    <p id="result"></p>
+</section>
+
+<footer>
+    <p>© 2026 Your Name | All Rights Reserved</p>
+</footer>
+
+<script>
+function showMore(){
+    document.getElementById("moreProjects").classList.toggle("hidden");
+}
+
+function sendMessage(){
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    if(name === "" || email === "" || message === ""){
+        document.getElementById("result").innerHTML = "Please fill all fields!";
+        document.getElementById("result").style.color = "red";
+    }else{
+        document.getElementById("result").innerHTML = "Thank you " + name + "! Your message has been sent.";
+        document.getElementById("result").style.color = "green";
+    }
+}
+</script>
+
 </body>
 </html>
