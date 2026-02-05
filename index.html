@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+<title>Lakshman Mandal - Portfolio</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -14,13 +15,13 @@
 }
 
 body{
-    background:#f4f4f4;
+    background:#eef2f7;
 }
 
 header{
-    background:#333;
+    background:#0d6efd;
     color:white;
-    padding:20px;
+    padding:30px;
     text-align:center;
 }
 
@@ -38,131 +39,202 @@ nav a{
 }
 
 section{
-    padding:50px;
+    padding:40px;
     text-align:center;
 }
 
-#about, #skills, #projects, #contact{
+.card{
     background:white;
-    margin:20px;
+    margin:20px auto;
+    max-width:900px;
+    padding:25px;
     border-radius:10px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+.skills span{
+    display:inline-block;
+    background:#0d6efd;
+    color:white;
+    padding:8px 12px;
+    margin:5px;
+    border-radius:5px;
+}
+
 button{
     padding:10px 20px;
-    background:#333;
+    background:#0d6efd;
     color:white;
     border:none;
     cursor:pointer;
+    border-radius:5px;
+}
+
+.project{
+    margin-top:15px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
 }
 
 footer{
     text-align:center;
     padding:20px;
-    background:#333;
+    background:#0d6efd;
     color:white;
     margin-top:20px;
-}
-
-.project-box{
-    margin-top:20px;
-}
-
-input, textarea{
-    width:80%;
-    padding:10px;
-    margin:10px 0;
 }
 
 .hidden{
     display:none;
 }
+
 </style>
 
 </head>
+
 <body>
 
 <header>
-    <h1>Your Name</h1>
-    <p>Digital Marketer | Web Developer | Freelancer</p>
+    <h1>Lakshman Mandal</h1>
+    <p>Digital Marketer | SEO Specialist | Web Enthusiast | Automation Learner</p>
 
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
+
 <section id="about">
+<div class="card">
     <h2>About Me</h2>
     <p>
-        Hi, I am a passionate professional who loves creating websites and digital experiences.
-        I specialize in digital marketing, web development and automation.
+        Hi, I am Lakshman Mandal, a full-stack digital marketer currently working at Grow Global.
+        I specialize in SEO, social media marketing, meta ads, and content strategy.
+        I am learning coding to build automation tools and smart digital solutions.
     </p>
+</div>
 </section>
+
 
 <section id="skills">
+<div class="card">
     <h2>Skills</h2>
-    <ul style="list-style:none;">
-        <li>HTML, CSS, JavaScript</li>
-        <li>SEO & Digital Marketing</li>
-        <li>Social Media Marketing</li>
-        <li>Website Design</li>
-    </ul>
+
+    <div class="skills">
+        <span>Digital Marketing</span>
+        <span>SEO Optimization</span>
+        <span>Meta Ads</span>
+        <span>Content Strategy</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Automation</span>
+        <span>Lead Generation</span>
+        <span>Social Media</span>
+    </div>
+</div>
 </section>
+
+
+<section id="experience">
+<div class="card">
+    <h2>Professional Experience</h2>
+
+    <p><b>Company:</b> Grow Global</p>
+    <p><b>Role:</b> Full Stack Digital Marketer</p>
+
+    <p>
+        Managing social media accounts, SEO strategies, paid ads,
+        content creation and helping brands grow their online presence.
+    </p>
+</div>
+</section>
+
 
 <section id="projects">
+<div class="card">
     <h2>My Projects</h2>
 
-    <div class="project-box">
-        <h3>Project 1</h3>
-        <p>Business Website Design</p>
+    <div class="project">
+        <h3>Grow Invoice</h3>
+        <p>SEO and branding strategy for online invoice generator platform.</p>
     </div>
 
-    <div class="project-box">
-        <h3>Project 2</h3>
-        <p>Marketing Landing Page</p>
+    <div class="project">
+        <h3>GLL.One</h3>
+        <p>Marketing and content optimization for creator platform.</p>
     </div>
 
-    <button onclick="showMore()">Show More Projects</button>
+    <div class="project">
+        <h3>ProHome Services</h3>
+        <p>Branding and digital marketing for home services business.</p>
+    </div>
 
-    <div id="moreProjects" class="hidden">
-        <div class="project-box">
-            <h3>Project 3</h3>
-            <p>Invoice Management System</p>
+    <button onclick="showMore()">Show More</button>
+
+    <div id="more" class="hidden">
+
+        <div class="project">
+            <h3>AI Automation Experiments</h3>
+            <p>Building automation systems for marketing tasks.</p>
         </div>
-        <div class="project-box">
-            <h3>Project 4</h3>
-            <p>Portfolio Website</p>
+
+        <div class="project">
+            <h3>Personal Portfolio</h3>
+            <p>Portfolio website using HTML, CSS and JavaScript.</p>
         </div>
+
     </div>
 
+</div>
 </section>
 
+
 <section id="contact">
+<div class="card">
     <h2>Contact Me</h2>
 
     <input type="text" id="name" placeholder="Your Name">
+
     <input type="email" id="email" placeholder="Your Email">
+
     <textarea id="message" placeholder="Your Message"></textarea>
 
-    <button onclick="sendMessage()">Send Message</button>
+    <button onclick="sendToWhatsApp()">
+        Send Message to WhatsApp
+    </button>
 
     <p id="result"></p>
+
+</div>
 </section>
 
+
 <footer>
-    <p>© 2026 Your Name | All Rights Reserved</p>
+    <p>© 2026 Lakshman Mandal | Digital Marketer</p>
 </footer>
 
+
 <script>
+
 function showMore(){
-    document.getElementById("moreProjects").classList.toggle("hidden");
+    document.getElementById("more").classList.toggle("hidden");
 }
 
-function sendMessage(){
+
+function sendToWhatsApp(){
+
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
@@ -170,11 +242,26 @@ function sendMessage(){
     if(name === "" || email === "" || message === ""){
         document.getElementById("result").innerHTML = "Please fill all fields!";
         document.getElementById("result").style.color = "red";
-    }else{
-        document.getElementById("result").innerHTML = "Thank you " + name + "! Your message has been sent.";
-        document.getElementById("result").style.color = "green";
+        return;
     }
+
+    var whatsappNumber = "919144191440";
+
+    var text =
+    "New Portfolio Lead%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Email: " + email + "%0A" +
+    "Message: " + message;
+
+    var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+    window.open(whatsappURL, "_blank");
+
+    document.getElementById("result").innerHTML =
+    "Redirecting to WhatsApp...";
+    document.getElementById("result").style.color = "green";
 }
+
 </script>
 
 </body>
